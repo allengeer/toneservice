@@ -11,7 +11,7 @@ def status():
 
 @app.route('/analyze')
 def tone():
-    text = request.args.get('text')
+    text = request.values.get("text")
     response = app.response_class(
         response=gettone(text),
         status=200,
