@@ -1,6 +1,5 @@
 from flask import Flask
 from flask import request
-from flask import jsonify
 from toneanalysis import gettone
 
 app = Flask(__name__)
@@ -9,7 +8,7 @@ app = Flask(__name__)
 def status():
     return 'RUNNING'
 
-@app.route('/analyze')
+@app.route('/analyze', methods=['GET', 'POST'])
 def tone():
     text = request.values.get("text")
     response = app.response_class(
@@ -20,4 +19,4 @@ def tone():
     return response
 
 if __name__ == '__main__':
-    app.run(debug=True,host='0.0.0.0')
+    app.run(debug=True,host='0.0.0.0',port=5005)
