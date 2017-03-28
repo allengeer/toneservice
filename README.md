@@ -24,3 +24,10 @@ We have included a Dockerfile and a requirements.txt file to create a base conta
 [Walkthrough of this package and using Docker to run it](http://allengeer.com/part-5-making-watson-microservice-using-python-docker-and-flask/)
 
 ## Redis Sidecar
+
+If you set the environment variable "SIDECAR" to be the hostname of a Redis sidecar container on default port
+the tone service will perform a sha256 hash of all input messages and store the resulting value to Redis. Any
+subsequent calls for that key will return the cached value instead of a new call to Bluemix.
+
+    SIDECAR=sidecar
+
