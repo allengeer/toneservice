@@ -22,3 +22,5 @@ We have included a Dockerfile and a requirements.txt file to create a base conta
 [How to create a Tone Analysis service using Watson on IBM Bluemix.](http://allengeer.com/part-3-ibm-completely-redeems-itself-building-a-tone-analysis-service-using-ibm-bluemix-and-watson/)
 
 [Walkthrough of this package and using Docker to run it](http://allengeer.com/part-5-making-watson-microservice-using-python-docker-and-flask/)
+
+## Redis Sidecar
